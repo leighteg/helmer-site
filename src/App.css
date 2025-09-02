@@ -1,0 +1,16 @@
+.info {
+    padding: 1em;
+    background-color: rgba(32, 115, 211, 0.4);
+    border-radius: 1em;
+}
+
+.downloadPane {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    background-color: rgba(215, 119, 45, 0.511);
+    border-radius: 1em;
+}
