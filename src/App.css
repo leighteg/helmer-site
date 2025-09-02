@@ -1,3 +1,13 @@
+.base {
+    max-width: 50em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+    text-align: center;
+}
+
 .info {
     padding: 1em;
     background-color: rgba(32, 115, 211, 0.4);
@@ -13,4 +23,43 @@
     padding: 1em;
     background-color: rgba(215, 119, 45, 0.511);
     border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+.downloadPane button {
+    display: flex;
+    align-items: center;
+    height: 2.5em;
+    border-radius: .5em;
+    border: 2px dashed black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.downloadPane button:hover {
+    border: 2px solid black;
+}
+
+.downloadPane button img {
+    padding: 1em;
+}
+
+.downloadPane button.windows {
+    background-color: rgba(46, 128, 221, 0.638);
+}
+
+.downloadPane button.macos {
+    background-color: rgba(46, 128, 221, 0.233);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.095);
+    backdrop-filter: blur(1em);
 }
