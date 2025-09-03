@@ -5,6 +5,7 @@ const Carousel = (props: { images: string[] }) => {
     const images = props.images;
 
     const [enlargedImage, setEnlargedImage] = createSignal<string>();
+    let canCloseEnlargedImage = false;
 
     let interval: number;
     const startSlide = () => {
@@ -45,16 +46,19 @@ const Carousel = (props: { images: string[] }) => {
         document.addEventListener('click', (e) => {
             let element = document.elementFromPoint(e.x, e.y);
 
-            if (enlargedImage() && element) {
-                if (element.className === "carousel-image" || element.parentElement?.id === "enlarged-image-container") return
-                setEnlargedImage(undefined)
+            if (enlargedImage() && element && canCloseEnlargedImage) {
+                if (element.id === "enlarged-image-container") {
+                    setEnlargedImage(undefined)
+                }
             }
         })
     })
 
     createEffect(() => {
         if (enlargedImage()) {
+            canCloseEnlargedImage = false;
             document.body.style.overflow = 'hidden';
+            setTimeout(() => canCloseEnlargedImage = true, 200)
         }
         else {
             document.body.style.overflow = '';
@@ -90,7 +94,9 @@ const Carousel = (props: { images: string[] }) => {
 
         <Show when={enlargedImage()}>
             <div id="enlarged-image-container">
-                <img src={enlargedImage()} />
+                <span>
+                    <img src={enlargedImage()} />
+                </span>
             </div>
         </Show>
         </>

@@ -75,25 +75,32 @@
 
 #enlarged-image-container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1em;
-    border-radius: 1em;
-    background-color: rgba(100, 100, 100, 0.4);
-    z-index: 100;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    backdrop-filter: blur(1em);
+
+    z-index: 100;
 }
 
-#enlarged-image-container img {
+#enlarged-image-container span {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+#enlarged-image-container span img {
     max-width: 85vw;
     max-height: 85vh;
     width: auto;
     height: auto;
     display: block;
+    user-select: none;
 }
 
 @keyframes rainbow-animation {
