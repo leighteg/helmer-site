@@ -84,6 +84,7 @@
     align-items: center;
 
     backdrop-filter: blur(1em);
+    cursor: alias;
 
     z-index: 100;
 }
@@ -92,6 +93,7 @@
     padding: 1em;
     border-radius: 1em;
     background-color: rgba(100, 100, 100, 0.4);
+    cursor: default;
 }
 
 #enlarged-image-container span img {
