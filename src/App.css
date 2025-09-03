@@ -8,6 +8,13 @@
     text-align: center;
 }
 
+.base > * {
+    transition: .3s;
+}
+.base > *:hover {
+    outline: 3px dashed black;
+}
+
 .info {
     padding: 1em;
     background-color: rgba(32, 115, 211, 0.4);
@@ -62,4 +69,7 @@ footer {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.095);
     backdrop-filter: blur(1em);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }

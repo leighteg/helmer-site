@@ -1,5 +1,7 @@
 import SponzaColumnsScreenshot from './assets/screenshots/sponza_columns.png'
 import SponzaRaptorScreenshot from './assets/screenshots/sponza_raptor.png'
+import SponzaOverviewScreenshot from './assets/screenshots/sponza_overview.png'
+import SponzaTopdownScreenshot from './assets/screenshots/sponza_topdown.png'
 import AppleLogo from './assets/logos/apple_black.svg'
 import WindowsLogo from './assets/logos/windows.svg'
 import Carousel from './components/Carousel/Carousel'
@@ -8,7 +10,7 @@ import './App.css'
 const App = () => {
     return (
         <>
-            <Carousel images={[SponzaColumnsScreenshot, SponzaRaptorScreenshot]} />
+            <Carousel images={[SponzaColumnsScreenshot, SponzaRaptorScreenshot, SponzaOverviewScreenshot, SponzaTopdownScreenshot]} />
 
             <div style={{ display: 'flex', "justify-content": 'center' }}>
                 <div class='base'>
