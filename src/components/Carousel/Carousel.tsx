@@ -90,7 +90,7 @@ const Carousel = (props: { images: string[] }) => {
 
         <Show when={enlargedImage()}>
             <div id="enlarged-image-container">
-                <img src={enlargedImage()} width={'100%'} />
+                <img src={enlargedImage()} />
             </div>
         </Show>
         </>
