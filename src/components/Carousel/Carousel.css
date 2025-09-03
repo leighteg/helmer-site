@@ -26,7 +26,6 @@
     background-clip: text;
     color: transparent;
     background-size: 200% 100%;
-    /* Larger size for animation */
     animation: rainbow-animation 3s alternate infinite;
     opacity: 70%;
 }
@@ -44,6 +43,7 @@
     object-position: center;
     width: 100%;
     height: 100%;
+    cursor: alias;
     -webkit-user-drag: none;
     -webkit-touch-callout: none;
 }
@@ -69,6 +69,18 @@
 .carousel-button.next {
     right: 0;
     border-radius: .5em 0 0 .5em;
+}
+
+#enlarged-image-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(100, 100, 100, 0.4);
+    z-index: 100;
 }
 
 @keyframes rainbow-animation {

@@ -1,8 +1,10 @@
-import { createSignal, onCleanup, Show, For } from "solid-js";
+import { createSignal, onCleanup, Show, For, onMount } from "solid-js";
 import "./Carousel.css";
 
 const Carousel = (props: { images: string[] }) => {
     const images = props.images;
+
+    const [enlargedImage, setEnlargedImage] = createSignal<string>();
 
     let interval: number;
     const startSlide = () => {
@@ -39,13 +41,25 @@ const Carousel = (props: { images: string[] }) => {
     startSlide();
     onCleanup(() => clearInterval(interval));
 
+    onMount(() => {
+        document.addEventListener('click', (e) => {
+            let element = document.elementFromPoint(e.x, e.y);
+
+            if (enlargedImage() && element) {
+                if (element.className === "carousel-image" || element.parentElement?.id === "enlarged-image-container") return
+                setEnlargedImage(undefined)
+            }
+        })
+    })
+
     return (
+        <>
         <div class="carousel-container" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
             <span class="carousel-title">helmer</span>
-            
+
             <div class="carousel-wrapper" style={{ transform: `translateX(-${current() * 100}%)` }}>
                 <For each={images}>{(image) =>
-                    <img src={image} class="carousel-image" />
+                    <img src={image} class="carousel-image" onClick={() => setEnlargedImage(image)} />
                 }</For>
             </div>
 
@@ -64,6 +78,13 @@ const Carousel = (props: { images: string[] }) => {
                 ›
             </button>
         </div>
+
+        <Show when={enlargedImage()}>
+            <div id="enlarged-image-container">
+                <img src={enlargedImage()} width={'100%'} />
+            </div>
+        </Show>
+        </>
     );
 };
 
