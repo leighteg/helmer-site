@@ -1,4 +1,4 @@
-import { createSignal, onCleanup, Show, For, onMount } from "solid-js";
+import { createSignal, onCleanup, Show, For, onMount, createEffect } from "solid-js";
 import "./Carousel.css";
 
 const Carousel = (props: { images: string[] }) => {
@@ -50,6 +50,15 @@ const Carousel = (props: { images: string[] }) => {
                 setEnlargedImage(undefined)
             }
         })
+    })
+
+    createEffect(() => {
+        if (enlargedImage()) {
+            document.body.style.overflow = 'hidden';
+        }
+        else {
+            document.body.style.overflow = '';
+        }
     })
 
     return (
