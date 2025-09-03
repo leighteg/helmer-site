@@ -45,11 +45,11 @@ const App = () => {
                         <span>helmer is still under heavy active development, and is not yet ready for production use. but to test helmer, a sponza scene demo is available for download.</span>
 
                         <span style={{ display: 'flex', "flex-direction": 'column', gap: '.5em' }}>
-                            <button class='windows'>
+                            <button class='windows' onClick={() => window.open(location.href + 'builds/helmer-win.zip', '_blank')?.focus()}>
                                 <img src={WindowsLogo} height={'90%'} />
                                 Windows (x64)
                             </button>
-                            <button class='macos'>
+                            <button class='macos' onClick={() => window.open(location.href + 'builds/helmer-mac.zip', '_blank')?.focus()}>
                                 <img src={AppleLogo} height={'90%'} />
                                 macOS (Apple Silicon)
                             </button>
