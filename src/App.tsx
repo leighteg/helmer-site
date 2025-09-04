@@ -58,7 +58,7 @@ const App = () => {
                 </div>
             </div>
 
-            <footer>© 2025 leighton</footer>
+            <footer>© 2025&nbsp;<a href='https://leighteg.dev'>leighton</a></footer>
         </>
     )
 }
