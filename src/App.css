@@ -8,10 +8,11 @@
     text-align: center;
 }
 
-.base > * {
+.base>* {
     transition: .3s;
 }
-.base > *:hover {
+
+.base>*:hover {
     outline: 3px dashed black;
 }
 
@@ -57,6 +58,12 @@
 
 .downloadPane button.macos {
     background-color: rgba(46, 128, 221, 0.233);
+}
+
+.downloadPane button.web {
+    background-color: rgba(255, 255, 255, 0.229);
+    opacity: 50%;
+    cursor: no-drop;
 }
 
 footer {

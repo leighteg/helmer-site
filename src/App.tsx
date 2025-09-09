@@ -4,6 +4,7 @@ import SponzaOverviewScreenshot from './assets/screenshots/sponza_overview.png'
 import SponzaTopdownScreenshot from './assets/screenshots/sponza_topdown.png'
 import AppleLogo from './assets/logos/apple_black.svg'
 import WindowsLogo from './assets/logos/windows.svg'
+import WASMLogo from './assets/logos/wasm.svg'
 import Carousel from './components/Carousel/Carousel'
 import './App.css'
 
@@ -52,6 +53,10 @@ const App = () => {
                             <button class='macos' onClick={() => window.open(location.href + 'builds/helmer-mac.zip', '_blank')?.focus()}>
                                 <img src={AppleLogo} height={'90%'} />
                                 macOS (Apple Silicon)
+                            </button>
+                            <button class='web'>
+                                <img src={WASMLogo} height={'90%'} />
+                                web (web support coming soon)
                             </button>
                         </span>
                     </div>
