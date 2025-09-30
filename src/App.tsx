@@ -2,6 +2,7 @@ import SponzaColumnsScreenshot from './assets/screenshots/sponza_columns.png'
 import SponzaRaptorScreenshot from './assets/screenshots/sponza_raptor.png'
 import SponzaOverviewScreenshot from './assets/screenshots/sponza_overview.png'
 import SponzaTopdownScreenshot from './assets/screenshots/sponza_topdown.png'
+import CityCornerScreenshot from './assets/screenshots/city_corner.png'
 import AppleLogo from './assets/logos/apple_black.svg'
 import WindowsLogo from './assets/logos/windows.svg'
 import WASMLogo from './assets/logos/wasm.svg'
@@ -11,7 +12,7 @@ import './App.css'
 const App = () => {
     return (
         <>
-            <Carousel images={[SponzaColumnsScreenshot, SponzaRaptorScreenshot, SponzaOverviewScreenshot, SponzaTopdownScreenshot]} />
+            <Carousel images={[SponzaColumnsScreenshot, CityCornerScreenshot, SponzaRaptorScreenshot, SponzaOverviewScreenshot, SponzaTopdownScreenshot]} />
 
             <div style={{ display: 'flex', "justify-content": 'center' }}>
                 <div class='base'>
@@ -27,9 +28,9 @@ const App = () => {
 
                             Forward Renderer (Modern) – Optimized for lower-end but still modern hardware, offering efficient per-material uniform handling.
 
-                            Forward Renderer (Legacy) – Built with maximum compatibility in mind, targeting older devices with texture array–based rendering.
+                            Forward Renderer (Legacy) – Built with maximum compatibility in mind, targeting older devices with texture array-based rendering.
 
-                            Currently in alpha and closed source (commercially developed), helmer is under active development with many more features planned. The mission remains constant: a platform where no single characteristic overshadows the rest—where graphics, performance, accessibility, and developer workflow exist in harmony.
+                            Currently in pre-alpha, helmer is under active development with many more features planned. The mission remains constant: a platform where no single characteristic overshadows the rest—where graphics, performance, accessibility, and developer workflow exist in harmony.
                         </p>
                     </div>
 
@@ -43,7 +44,7 @@ const App = () => {
 
                     <div class='downloadPane'>
                         <h3 style={{ margin: '0' }}>Sponza Demo</h3>
-                        <span>helmer is still under heavy active development, and is not yet ready for production use. but to test helmer, a sponza scene demo is available for download.</span>
+                        <span>helmer is still under heavy active development, and is not yet ready for production use. but to test helmer's capabilities, a sponza scene demo is available for download.</span>
 
                         <span style={{ display: 'flex', "flex-direction": 'column', gap: '.5em' }}>
                             <button class='windows' onClick={() => window.open(location.href + 'builds/helmer-win.zip', '_blank')?.focus()}>
@@ -51,6 +52,26 @@ const App = () => {
                                 Windows (x64)
                             </button>
                             <button class='macos' onClick={() => window.open(location.href + 'builds/helmer-mac.zip', '_blank')?.focus()}>
+                                <img src={AppleLogo} height={'90%'} />
+                                macOS (Apple Silicon)
+                            </button>
+                            <button class='web'>
+                                <img src={WASMLogo} height={'90%'} />
+                                web (web support coming soon)
+                            </button>
+                        </span>
+                    </div>
+
+                    <div class='downloadPane'>
+                        <h3 style={{ margin: '0' }}>City Demo</h3>
+                        <span>the city demo is another showcase of helmer's capabilities (in its current pre-alpha state), on a much larger scale, featuring new and improved features the sponza demo lacks—like controller support and many renderer improvements & optimizations. this pre-alpha build of helmer features some temporary workarounds (like the lighting's sky light contribution)</span>
+
+                        <span style={{ display: 'flex', "flex-direction": 'column', gap: '.5em' }}>
+                            <button class='windows' onClick={() => window.open(location.href + 'builds/helmer_city-win.zip', '_blank')?.focus()}>
+                                <img src={WindowsLogo} height={'90%'} />
+                                Windows (x64)
+                            </button>
+                            <button class='macos' onClick={() => window.open(location.href + 'builds/helmer_city-mac.zip', '_blank')?.focus()}>
                                 <img src={AppleLogo} height={'90%'} />
                                 macOS (Apple Silicon)
                             </button>

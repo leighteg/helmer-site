@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     padding: 2em;
+    padding-bottom: 4em;
     gap: 2em;
     text-align: center;
 }
@@ -29,9 +30,8 @@
     align-items: center;
     gap: 1em;
     padding: 1em;
-    background-color: rgba(215, 119, 45, 0.511);
+    background-color: rgba(99, 215, 45, 0.511);
     border-radius: 1em;
-    margin-bottom: 2em;
 }
 
 .downloadPane button {
