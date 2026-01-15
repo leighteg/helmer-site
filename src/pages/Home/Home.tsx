@@ -49,7 +49,7 @@ const Home = () => {
                         <h3>Almost there...</h3>
 
                         <p>
-                            Unfortunately, helmer is not yet ready for you to use, but its getting there. Expect an alpha v1 release April-July - which will hopefully include an editor.
+                            Unfortunately, helmer is not yet ready for you to use, but it's getting there. Expect an alpha v1 release April-July - which will hopefully include an editor.
                         </p>
                     </div>
                 </div>

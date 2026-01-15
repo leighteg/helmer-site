@@ -15,7 +15,7 @@ type DemoEntry = {
 const Demos: DemoEntry[] = [
     {
         title: "helmer view",
-        description: "a robust tool for viewing gltf models/scenes",
+        description: "a robust tool for viewing GLTF models/scenes",
         icon: "",
         file: new URL("https://helmer.leighteg.dev/builds/demos/helmer_view"),
         date: new Date(Date.UTC(2026, 0, 15)),
