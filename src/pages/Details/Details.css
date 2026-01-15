@@ -1,0 +1,24 @@
+#details-body {
+    margin-top: 3em;
+    margin-bottom: 4em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#details-body #title {
+    font-size: 3.5em;
+}
+
+#details-body .feature-section {
+    max-width: 60%;
+
+    padding: 1em;
+    padding-top: 0;
+
+    border-radius: 1em;
+    background-color: rgba(190, 190, 190, 0.3);
+}

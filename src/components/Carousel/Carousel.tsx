@@ -9,7 +9,7 @@ const Carousel = (props: { images: string[] }) => {
 
     let interval: number;
     const startSlide = () => {
-        interval = setInterval(next, 4000);
+        interval = setInterval(next, 5000);
     }
 
     const [current, setCurrent] = createSignal(0);

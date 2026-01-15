@@ -11,25 +11,19 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 13vw;
     font-weight: bold;
-    transition: 4s;
+    transition: .4s;
     z-index: 10;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    pointer-events: none;
 }
 
 .carousel-title:hover {
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: 600;
-    background-size: 200% 100%;
-    animation: rainbow-animation 3s alternate infinite;
-    opacity: 70%;
+    color: rgba(60, 60, 60, 0.9);
 }
 
 .carousel-wrapper {
@@ -103,14 +97,4 @@
     height: auto;
     display: block;
     user-select: none;
-}
-
-@keyframes rainbow-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
 }

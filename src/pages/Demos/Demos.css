@@ -1,0 +1,56 @@
+#demos-body {
+    margin-top: 3em;
+    margin-bottom: 4em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#demos-body #title {
+    font-size: 3.5em;
+}
+
+#demos-body .demo-section {
+    max-width: 60%;
+
+    padding: 1em;
+    padding-top: 0;
+
+    border-radius: 1em;
+    background-color: rgba(190, 190, 190, 0.3);
+}
+
+#demos-body .demo-section button {
+    display: flex;
+    align-items: center;
+    height: 2.5em;
+    border-radius: .5em;
+    border: 2px dashed black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#demos-body .demo-section button:hover {
+    border: 2px solid black;
+}
+
+#demos-body .demo-section button img {
+    padding: 1em;
+}
+
+#demos-body .demo-section button.windows {
+    background-color: rgba(46, 128, 221, 0.638);
+}
+
+#demos-body .demo-section button.macos {
+    background-color: rgba(46, 128, 221, 0.233);
+}
+
+#demos-body .demo-section button.web {
+    background-color: rgba(255, 255, 255, 0.229);
+    opacity: 50%;
+    cursor: no-drop;
+}

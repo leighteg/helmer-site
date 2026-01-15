@@ -1,0 +1,96 @@
+#navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 3em;
+
+    background-color: rgba(31, 31, 31, 0.5);
+    backdrop-filter: blur(3em);
+
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+#navbar * {
+    margin: 0 .3em 0 .3em;
+}
+
+#navbar #title {
+    margin-right: .5em;
+
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3vw;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    transition: .4s;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#navbar #children {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+
+#navbar #children * {
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#navbar a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  z-index: 1;
+}
+
+#navbar a.active {
+    color: rgba(255, 255, 255, 1.0);
+}
+
+#navbar a::before {
+  content: "";
+  position: absolute;
+  inset: -8px; /* controls glow spread */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35),
+    transparent 70%
+  );
+  opacity: 0;
+  filter: blur(12px);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+#navbar a.active::before {
+  opacity: 1;
+}
+
+#navbar #disclaimer {
+    color: white;
+    pointer-events: none;
+    font-size: clamp(0.5rem, 1.1vw, 0.9rem);
+    white-space: wrap;
+    width: 100%;
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
