@@ -54,3 +54,9 @@
     opacity: 50%;
     cursor: no-drop;
 }
+
+@media screen and (max-width: 600px) {
+    #demos-body .demo-section {
+        max-width: 90%;
+    }
+}

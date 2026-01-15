@@ -22,3 +22,9 @@
     border-radius: 1em;
     background-color: rgba(190, 190, 190, 0.3);
 }
+
+@media screen and (max-width: 600px) {
+    #details-body .feature-section {
+        max-width: 90%;
+    }
+}
