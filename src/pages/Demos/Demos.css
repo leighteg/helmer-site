@@ -38,7 +38,8 @@
 }
 
 #demos-body .demo-section button img {
-    padding: 1em;
+    margin-right: .8em;
+    margin-left: .3em;
 }
 
 #demos-body .demo-section button.windows {
