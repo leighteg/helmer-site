@@ -20,6 +20,7 @@ const NavBar = () => {
 
             <div id="children">
                 <NavBarItem name="features" path="details" />
+                <NavBarItem name="tooling" path="tools" />
                 <NavBarItem name="demos" path="demos" />
             </div>
         </div>

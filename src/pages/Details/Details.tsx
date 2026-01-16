@@ -8,7 +8,7 @@ const DetailsPage = () => {
 
                 <div class="feature-section">
                     <h2>wield the logic thread</h2>
-                    <p>although ECS integrations are provided, you are <b>not</b> bound to a single game logic architecture pattern. helmer's lightweight runtime enables you to directly hook callbacks to the logic thread, so you can provide a completely custom logic implementation.</p>
+                    <p>although ECS integrations are provided, you are <b>not</b> bound to a single game logic paradigm. helmer's lightweight runtime enables you to directly hook callbacks to the logic thread, so you can provide a completely custom logic implementation.</p>
                 </div>
 
                 <div class="feature-section">

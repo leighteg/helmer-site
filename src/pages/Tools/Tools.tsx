@@ -3,9 +3,9 @@ import TuxLogo from '../../assets/logos/tux.svg'
 import AppleLogo from '../../assets/logos/apple_black.svg'
 import WindowsLogo from '../../assets/logos/windows.svg'
 import WASMLogo from '../../assets/logos/wasm.svg'
-import "./Demos.css"
+import "./Tools.css"
 
-type DemoEntry = {
+type ToolEntry = {
     title: string,
     description: string,
     icon: string,
@@ -13,34 +13,42 @@ type DemoEntry = {
     date: Date,
 }
 
-const Demos: DemoEntry[] = []
+const Tools: ToolEntry[] = [
+    {
+        title: "helmer view",
+        description: "a robust tool for viewing GLTF models/scenes",
+        icon: "",
+        file: new URL("https://helmer.leighteg.dev/builds/tools/helmer_view"),
+        date: new Date(Date.UTC(2026, 0, 17)),
+    }
+]
 
-const DemosPage = () => {
+const ToolsPage = () => {
     return (
         <>
-            <div id="demos-body">
-                <h1 id="title">demos</h1>
+            <div id="tools-body">
+                <h1 id="title">tooling</h1>
                 
-                <For each={Demos}>{demo =>
-                    <div class="demo-section">
-                        <h2>{demo.title}</h2>
+                <For each={Tools}>{tool =>
+                    <div class="tool-section">
+                        <h2>{tool.title}</h2>
 
-                        <p>{demo.description}</p>
+                        <p>{tool.description}</p>
 
                         <span style={{ display: 'flex', "flex-direction": 'column', gap: '.5em', "margin-bottom": ".8em" }}>
-                            <button class='linux' onClick={() => window.open(demo.file + '-linux_x64.tar.gz', '_blank')?.focus()}>
+                            <button class='linux' onClick={() => window.open(tool.file + '-linux_x64.tar.gz', '_blank')?.focus()}>
                                 <img src={TuxLogo} height={'90%'} />
                                 Linux (x64)
                             </button>
-                            <button class='windows' onClick={() => window.open(demo.file + '-win_x64.zip', '_blank')?.focus()}>
+                            <button class='windows' onClick={() => window.open(tool.file + '-win_x64.zip', '_blank')?.focus()}>
                                 <img src={WindowsLogo} height={'90%'} />
                                 Windows (x64)
                             </button>
-                            <button class='macos' onClick={() => window.open(demo.file + '-mac_arm.zip', '_blank')?.focus()}>
+                            <button class='macos' onClick={() => window.open(tool.file + '-mac_arm.zip', '_blank')?.focus()}>
                                 <img src={AppleLogo} height={'90%'} />
                                 macOS (Apple Silicon)
                             </button>
-                            <button class='macos' onClick={() => window.open(demo.file + '-mac_x64.zip', '_blank')?.focus()}>
+                            <button class='macos' onClick={() => window.open(tool.file + '-mac_x64.zip', '_blank')?.focus()}>
                                 <img src={AppleLogo} height={'90%'} />
                                 macOS (x64)
                             </button>
@@ -50,7 +58,7 @@ const DemosPage = () => {
                             </button>
                         </span>
                         
-                        <span>{demo.date.toLocaleDateString()}</span>
+                        <span>{tool.date.toLocaleDateString()}</span>
                     </div>
                 }</For>
             </div>
@@ -58,4 +66,4 @@ const DemosPage = () => {
     )
 }
 
-export default DemosPage
+export default ToolsPage

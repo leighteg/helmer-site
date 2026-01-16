@@ -19,7 +19,7 @@ const Home = () => {
                         <p>Considering the scope/extensibility/goals of modern engines, this is a loaded question.</p>
 
                         <p>
-                            Modern foundations often overcommit, pushing visuals at the cost of performance, or chasing performance at the expense of developer workflow and accessibility. helmer was built to close that gap. Its philosophy is balance: delivering strong visuals, consistent performance across hardware generations, and a streamlined developer experience. Where other engines lean heavily in one direction, helmer aims to keep all aspects in equilibrium.
+                            Modern foundations often overcommit, pushing visuals at the cost of performance, or chasing performance at the expense of developer workflow and accessibility. helmer was built to close that gap. Its philosophy is balance: delivering robust visuals, consistent performance across hardware generations, and a streamlined developer experience. Where other engines lean heavily in one direction, helmer aims to keep all aspects in equilibrium.
                         </p>
                         <p>
                             Regardless, arguably any mainstream engine is likely bound by architectural decisions made 12+ years ago.
