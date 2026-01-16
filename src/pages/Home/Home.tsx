@@ -41,6 +41,10 @@ const Home = () => {
                         <h2>features<span> &nbsp; </span>→</h2>
                     </a>
 
+                    <a href='/tools' class='page-pane' style={{"background-color": "rgba(160, 230, 150, 0.23)"}}>
+                        <h2>tooling<span> &nbsp; </span>→</h2>
+                    </a>
+
                     <a href='/demos' class='page-pane' style={{"background-color": "rgba(200, 150, 200, 0.23)"}}>
                         <h2>demos<span> &nbsp; </span>→</h2>
                     </a>
