@@ -1,4 +1,5 @@
 import { For } from "solid-js"
+import TuxLogo from '../../assets/logos/tux.svg'
 import AppleLogo from '../../assets/logos/apple_black.svg'
 import WindowsLogo from '../../assets/logos/windows.svg'
 import WASMLogo from '../../assets/logos/wasm.svg'
@@ -35,13 +36,21 @@ const DemosPage = () => {
                         <p>{demo.description}</p>
 
                         <span style={{ display: 'flex', "flex-direction": 'column', gap: '.5em', "margin-bottom": ".8em" }}>
-                            <button class='windows' onClick={() => window.open(demo.file + '-win.zip', '_blank')?.focus()}>
+                            <button class='linux' onClick={() => window.open(demo.file + '-linux_x64.tar.gz', '_blank')?.focus()}>
+                                <img src={TuxLogo} height={'90%'} />
+                                Linux (x64)
+                            </button>
+                            <button class='windows' onClick={() => window.open(demo.file + '-win_x64.zip', '_blank')?.focus()}>
                                 <img src={WindowsLogo} height={'90%'} />
                                 Windows (x64)
                             </button>
-                            <button class='macos' onClick={() => window.open(demo.file + '-mac.zip', '_blank')?.focus()}>
+                            <button class='macos' onClick={() => window.open(demo.file + '-mac_arm.zip', '_blank')?.focus()}>
                                 <img src={AppleLogo} height={'90%'} />
                                 macOS (Apple Silicon)
+                            </button>
+                            <button class='macos' onClick={() => window.open(demo.file + '-mac_x64.zip', '_blank')?.focus()}>
+                                <img src={AppleLogo} height={'90%'} />
+                                macOS (x64)
                             </button>
                             <button class='web'>
                                 <img src={WASMLogo} height={'90%'} />
