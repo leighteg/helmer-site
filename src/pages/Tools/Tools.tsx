@@ -35,7 +35,8 @@ const ToolsPage = () => {
                 
                 <For each={Tools}>{tool =>
                     <div class="tool-section">
-                        <h2>{tool.title}</h2>
+                        <h2 style={{"margin-bottom": "0"}}>{tool.title}</h2>
+                        <b><span class="stage" style={tool.stage === 'preview' ? { color: '#FFA500' } : tool.stage === 'pre-alpha' ? { color: '#FF0000' } : tool.stage === 'alpha' ? { color: '#FFC0CB' } : tool.stage === 'beta' ? { color: '#808080' } : { color: '#00FF00' }}>{tool.stage}</span></b><br/>
 
                         <p>{tool.description}</p>
 
@@ -62,7 +63,6 @@ const ToolsPage = () => {
                             </button>
                         </span>
 
-                        <b><span class="stage" style={tool.stage === 'preview' ? { color: '#FFA500' } : tool.stage === 'pre-alpha' ? { color: '#FF0000' } : tool.stage === 'alpha' ? { color: '#FFC0CB' } : tool.stage === 'beta' ? { color: '#808080' } : { color: '#00FF00' }}>{tool.stage}</span></b><br/>
                         <span>{tool.date.toLocaleDateString()}</span>
                     </div>
                 }</For>
