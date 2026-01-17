@@ -5,12 +5,15 @@ import WindowsLogo from '../../assets/logos/windows.svg'
 import WASMLogo from '../../assets/logos/wasm.svg'
 import "./Tools.css"
 
+type ToolStage = 'preview' | 'pre-alpha' | 'alpha' | 'beta' | 'release'
+
 type ToolEntry = {
     title: string,
     description: string,
     icon: string,
     file: URL,
     date: Date,
+    stage: ToolStage,
 }
 
 const Tools: ToolEntry[] = [
@@ -20,6 +23,7 @@ const Tools: ToolEntry[] = [
         icon: "",
         file: new URL("https://helmer.leighteg.dev/builds/tools/helmer_view"),
         date: new Date(Date.UTC(2026, 0, 17)),
+        stage: 'preview',
     }
 ]
 
@@ -57,7 +61,8 @@ const ToolsPage = () => {
                                 web (web support coming soon)
                             </button>
                         </span>
-                        
+
+                        <b><span class="stage" style={tool.stage === 'preview' ? { color: '#FFA500' } : tool.stage === 'pre-alpha' ? { color: '#FF0000' } : tool.stage === 'alpha' ? { color: '#FFC0CB' } : tool.stage === 'beta' ? { color: '#808080' } : { color: '#00FF00' }}>{tool.stage}</span></b><br/>
                         <span>{tool.date.toLocaleDateString()}</span>
                     </div>
                 }</For>
