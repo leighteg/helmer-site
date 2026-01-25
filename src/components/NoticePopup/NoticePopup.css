@@ -85,7 +85,11 @@
         border-radius: 0;
     }
 
+    #notice-popup .container .content-container {
+        height: 70%;
+    }
+
     #notice-popup .container .button-container {
-        height: 10%;
+        height: 20%;
     }
 }
