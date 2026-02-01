@@ -41,6 +41,10 @@ const ToolsPage = () => {
                         <p>{tool.description}</p>
 
                         <span style={{ display: 'flex', "flex-direction": 'column', gap: '.5em', "margin-bottom": ".8em" }}>
+                            <button class='web' onClick={() => window.open(tool.file + '/WASM/helmer_view/index.html', '_blank')?.focus()}>
+                                <img src={WASMLogo} height={'90%'} />
+                                web
+                            </button>
                             <button class='linux' onClick={() => window.open(tool.file + '-linux_x64.tar.gz', '_blank')?.focus()}>
                                 <img src={TuxLogo} height={'90%'} />
                                 Linux (x64)
@@ -56,10 +60,6 @@ const ToolsPage = () => {
                             <button class='macos' onClick={() => window.open(tool.file + '-mac_x64.zip', '_blank')?.focus()}>
                                 <img src={AppleLogo} height={'90%'} />
                                 macOS (x64)
-                            </button>
-                            <button class='web'>
-                                <img src={WASMLogo} height={'90%'} />
-                                web (web support coming soon)
                             </button>
                         </span>
 
