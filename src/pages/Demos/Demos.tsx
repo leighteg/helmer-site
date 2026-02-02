@@ -16,7 +16,7 @@ type DemoEntry = {
 
 const Demos: DemoEntry[] = [
     {
-        title: "helmer_becs city scene",
+        title: "city scene [helmer_becs]",
         description: <div>
             <ul>
                 <li>built over <a href="https://github.com/bevyengine/bevy/tree/main/crates/bevy_ecs">bevy_ecs</a> integration (helmer_becs)</li>

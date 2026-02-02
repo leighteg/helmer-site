@@ -19,6 +19,8 @@
     align-items: center;
     justify-content: center;
     max-width: 60%;
+    width: 100%;
+    box-sizing: border-box;
 
     padding: 1em;
     padding-top: 0;
@@ -29,17 +31,22 @@
 
 #demos-body .demo-section img {
     width: 100%;
+    height: auto;
+    display: block;
     border-radius: .3em;
 }
 
 #demos-body .demo-section button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     height: 2.5em;
+    padding: 0 1.2em 0 0;
     border-radius: .5em;
     border: 2px dashed black;
     font-weight: 600;
     cursor: pointer;
+    background: none;
 }
 
 #demos-body .demo-section button:hover {
@@ -47,8 +54,9 @@
 }
 
 #demos-body .demo-section button img {
+    height: 1.7em;
+    width: auto;
     object-fit: contain;
-    width: fit-content;
     margin-right: .8em;
     margin-left: .3em;
 }
