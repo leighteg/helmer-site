@@ -40,6 +40,8 @@
 #tools-body .tool-section button img {
     margin-right: .8em;
     margin-left: .3em;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
 }
 
 #tools-body .tool-section button.windows {
