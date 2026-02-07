@@ -24,6 +24,10 @@ const Demos: DemoEntry[] = [
                 <li>runtime asset derivative generation</li>
                 <li>features bulk physics entity spawner for stressbenching</li>
             </ul>
+            <b>shortcuts</b>
+            <ul>
+                <li><b>ctrl + g:</b> tuning/stats ui</li>
+            </ul>
         </div> as HTMLDivElement,
         icon: CityCornerScreenshot,
         file: new URL("https://helmer.leighteg.dev/builds/demos/becs_bench"),
