@@ -13,7 +13,7 @@ const Home = () => {
 
             <div style={{ display: 'flex', "justify-content": 'center' }}>
                 <div class='base'>
-                    <div class='info' style={{"max-width": "53em"}}>
+                    <div class='info' style={{ "max-width": "53em" }}>
                         <h3>Why Reinvent the Wheel?</h3>
 
                         <p>Considering the scope/extensibility/goals of modern engines, this is a loaded question.</p>
@@ -26,7 +26,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div class='info' style={{"max-width": "53em"}}>
+                    <div class='info' style={{ "max-width": "53em" }}>
                         <h3>But alternatives already fill that gap...</h3>
 
                         <p>
@@ -41,20 +41,18 @@ const Home = () => {
                         <h2>features<span> &nbsp; </span>→</h2>
                     </a>
 
-                    <a href='/tools' class='page-pane' style={{"background-color": "rgba(160, 230, 150, 0.23)"}}>
+                    <a href='/tools' class='page-pane' style={{ "background-color": "rgba(160, 230, 150, 0.23)" }}>
                         <h2>tooling<span> &nbsp; </span>→</h2>
                     </a>
 
-                    <a href='/demos' class='page-pane' style={{"background-color": "rgba(200, 150, 200, 0.23)"}}>
+                    <a href='/demos' class='page-pane' style={{ "background-color": "rgba(200, 150, 200, 0.23)" }}>
                         <h2>demos<span> &nbsp; </span>→</h2>
                     </a>
 
-                    <div class='info' style={{"max-width": "53em"}}>
+                    <div class='info' style={{ "max-width": "53em" }}>
                         <h3>Almost there...</h3>
 
-                        <p>
-                            Unfortunately, helmer is not yet ready for you to use, but it's getting there. Expect an alpha v1 release April-July - which will hopefully include an editor.
-                        </p>
+                        <p>all major features are implemented. helmer is <a href='https://github.com/leighteg/helmer?tab=readme-ov-file#left-to-do'>very close</a> to alpha</p>
                     </div>
                 </div>
             </div>
