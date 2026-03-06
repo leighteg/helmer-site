@@ -48,13 +48,26 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(5em);
-    color: black;
+    color: rgba(255, 255, 255, 0.4);
     border: none;
     font-size: 2rem;
     cursor: pointer;
     padding: 1rem;
+
+    transition: .13s;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 1);
+    font-size: 2.2rem;
+}
+
+.carousel-button:active {
+    font-size: 2rem;
+    padding: 1.1rem;
 }
 
 .carousel-button.prev {

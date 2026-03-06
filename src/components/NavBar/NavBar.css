@@ -25,7 +25,8 @@
 }
 
 #navbar #title {
-  margin-right: .5em;
+  margin-left: .3em;
+  margin-right: .3em;
 
   color: rgba(255, 255, 255, 0.5);
   font-size: 3vw;
@@ -43,16 +44,17 @@
 
   display: flex;
   align-items: center;
-  gap: .3em;
+  gap: .5em;
 }
 
-#navbar * {
+#navbar #children * {
   cursor: pointer;
   white-space: nowrap;
 }
 
 #navbar a {
   position: relative;
+  margin: 0;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   z-index: 1;
@@ -74,6 +76,7 @@
   filter: blur(12px);
   z-index: -1;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 #navbar #children a.active::before {
@@ -100,14 +103,16 @@
 
 #navbar #children-social img {
   opacity: 60%;
-  transition: .25s;
-  max-width: 2.4em;
+  max-width: 2.2em;
   max-height: 100%;
   margin: 0;
+  transition: .15s;
 }
 
 #navbar #children-social img:hover {
   opacity: 100%;
+  scale: 1.05;
+  transition: .25s;
 }
 
 #navbar #disclaimer {
