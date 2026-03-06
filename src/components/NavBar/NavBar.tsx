@@ -6,7 +6,7 @@ import StoatLogo from '../../assets/logos/stoat-light.svg'
 
 const NavBarItem = (props: { name?: string; icon?: string; path: string }) => {
   const location = useLocation();
-  const active = createMemo(() => location.pathname === `/${props.path}`);
+  const active = createMemo(() => location.pathname === `${props.path}`);
 
   return (
     <a href={`${props.path}`} classList={{ active: active() }}>
@@ -19,9 +19,12 @@ const NavBarItem = (props: { name?: string; icon?: string; path: string }) => {
 };
 
 const NavBar = () => {
+  const location = useLocation();
+  const isTitleBarActive = createMemo(() => location.pathname === `/`);
+
   return (
     <div id="navbar">
-      <a id="title" href="/">helmer</a>
+      <a id="title" href="/" classList={{ active: isTitleBarActive() }}>helmer</a>
 
       <div id="children">
         <NavBarItem name="features" path="/details" />

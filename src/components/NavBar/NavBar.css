@@ -60,11 +60,11 @@
   z-index: 1;
 }
 
-#navbar #children a.active {
+#navbar *.active {
   color: rgba(255, 255, 255, 1.0);
 }
 
-#navbar #children a::before {
+#navbar *::before {
   content: "";
   position: absolute;
   inset: -8px;
@@ -79,7 +79,7 @@
   pointer-events: none;
 }
 
-#navbar #children a.active::before {
+#navbar *.active::before {
   opacity: 1;
 }
 

@@ -7,8 +7,8 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0.0, 0.0, 0.0, 0.4);
-    backdrop-filter: blur(.6em);
+    background-color: rgba(120, 120, 120, 0.4);
+    backdrop-filter: blur(.4em);
 
     z-index: 1000;
 }
@@ -38,7 +38,7 @@
 #notice-popup .container h2 {
     color: rgba(255, 0, 0, 0.748);
     background-color: rgba(0, 0, 0, 0.15);
-    border-radius: .5em;
+    border-radius: .3em;
     padding: .1em;
 }
 
@@ -48,7 +48,7 @@
     font-size: 1em;
     color: white;
     background-color: rgba(0, 0, 0, 0.15);
-    border-radius: .5em;
+    border-radius: .3em;
 }
 
 #notice-popup .container .button-container {
