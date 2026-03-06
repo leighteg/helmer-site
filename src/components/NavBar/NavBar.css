@@ -46,12 +46,12 @@
   gap: .3em;
 }
 
-#navbar #children * {
+#navbar * {
   cursor: pointer;
   white-space: nowrap;
 }
 
-#navbar #children a {
+#navbar a {
   position: relative;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
@@ -81,6 +81,7 @@
 }
 
 #navbar #children-social {
+  margin-right: 1em;
   height: 100%;
 
   display: flex;
