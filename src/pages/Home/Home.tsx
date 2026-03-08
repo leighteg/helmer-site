@@ -26,7 +26,7 @@ const Home = () => {
             <div style={{ display: 'flex', "justify-content": 'center' }}>
                 <div class='base'>
                     <div class='info' style={{ "max-width": "53em" }}>
-                        <h2>modular, extensible runtime<br />bring your own logic, or build over ours.</h2>
+                        <h2>modular, extensible runtime.<br />bring your own logic, or build over ours.</h2>
 
                         <p>there are many ways to use helmer. at it's core, <code>helmer</code> is nothing more than a robust, extendable runtime. components like the renderer, windowing, and audio are extensions of this runtime. this means you are <b>not</b> locked into some inherent/dependant logic paradigm such as ECS, nor an editor</p>
 
@@ -58,7 +58,7 @@ const Home = () => {
                     </div>
 
                     <div class='info' style={{ "max-width": "53em" }}>
-                        <h2>beautiful, scalable, powerful rendering</h2>
+                        <h2>beautiful, scalable, powerful rendering.</h2>
 
                         <p>a flexible, massively scalable render system built over a robust graph and a powerful asset pipeline</p>
 
