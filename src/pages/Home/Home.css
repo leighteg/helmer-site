@@ -31,6 +31,95 @@
     border-radius: 1em;
 }
 
+.info>* {
+    transition: .13s;
+}
+
+.info>*:hover {
+    transition: .2s;
+}
+
+.info>*:active {
+    scale: 1.03;
+}
+
+.info-sec-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.info-sec-cont>* {
+    transition: .13s;
+}
+
+.info-sec-cont>*:hover {
+    transition: .2s;
+}
+
+.info-sec-cont>*:active {
+    scale: 1.03;
+}
+
+.info-sec-cont>a.info-sec:active {
+    background-color: rgb(175, 175, 175);
+}
+
+.info-sec-cont>.info-sec:active {
+    background-color: rgb(230, 230, 230);
+}
+
+.info-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: .2em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+a.info-sec {
+    outline: 2px solid rgba(0, 0, 255, 0.2);
+
+    color: inherit;
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+a.info-sec:hover {
+    scale: 1.01;
+}
+
+a.info-sec:active {
+    outline: 2px solid rgba(0, 0, 255, 0.4);
+}
+
+.info-sec img {
+    padding: 1em;
+}
+
+.info-sec p {
+    margin: 0;
+}
+
+.info-sec>* {
+    transition: .13s;
+}
+
+.info-sec>*:hover {
+    transition: .2s;
+}
+
+.info-sec>*:active {
+    scale: 1.03;
+}
+
 .page-pane {
     min-width: 40%;
     display: flex;
@@ -41,10 +130,10 @@
     padding: 1em;
     background-color: rgba(0, 136, 255, 0.13);
     border-radius: 1em;
-    
+
     color: inherit;
     text-decoration: none;
-    
+
     cursor: pointer;
 
     user-select: none;
@@ -56,6 +145,7 @@
     box-shadow: none;
     transition: .1s;
 }
+
 .page-pane:active {
     scale: 0.97;
 }
@@ -64,6 +154,7 @@
     font-size: xx-small;
     transition: .15s;
 }
+
 .page-pane:hover span {
     font-size: x-large;
 }

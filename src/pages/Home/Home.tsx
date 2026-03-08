@@ -14,27 +14,129 @@ const Home = () => {
             <div style={{ display: 'flex', "justify-content": 'center' }}>
                 <div class='base'>
                     <div class='info' style={{ "max-width": "53em" }}>
-                        <h3>Why Reinvent the Wheel?</h3>
+                        <h2>modular, extensible runtime<br />bring your own logic, or build over ours.</h2>
 
-                        <p>Considering the scope/extensibility/goals of modern engines, this is a loaded question.</p>
+                        <p>there are many ways to use helmer. at it's core, <code>helmer</code> is nothing more than a robust, extendable runtime. components like the renderer, windowing, and audio are extensions of this runtime. this means you are <b>not</b> locked into some inherent/dependant logic paradigm such as ECS, nor an editor</p>
 
-                        <p>
-                            Modern foundations often overcommit, pushing visuals at the cost of performance, or chasing performance at the expense of developer workflow and accessibility. helmer was built to close that gap. Its philosophy is balance: delivering robust visuals, consistent performance across hardware generations, and a streamlined developer experience. Where other engines lean heavily in one direction, helmer aims to keep all aspects in equilibrium.
-                        </p>
-                        <p>
-                            Regardless, arguably any mainstream engine is likely bound by architectural decisions made 12+ years ago.
-                        </p>
+                        <div class='info-sec-cont'>
+                            <h4>want to get straight to scripting? multiple integrations are provided:</h4>
+
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_editor_egui'>
+                                <h3>helmer editor</h3>
+                                <p>a powerful, featured editor providing rich luau, rust, and visual scripting integrations</p>
+                                <img src='https://raw.githubusercontent.com/leighteg/helmer/refs/heads/main/assets/screenshots/editor.png' width={'100%'} style={{ 'padding': 0 }} />
+                            </a>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_becs'>
+                                <h3><code>helmer_becs</code></h3>
+                                <p>a robust integration for the expeditious yet powerful <code>bevy_ecs</code> library</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                            </a>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_becs'>
+                                <h3><code>helmer_ecs</code></h3>
+                                <p>an integration for helmer's own simple ecs</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                            </a>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_becs'>
+                                <h3>custom!</h3>
+                                <p>manually orchestrate data</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                            </a>
+                        </div>
                     </div>
 
                     <div class='info' style={{ "max-width": "53em" }}>
-                        <h3>But alternatives already fill that gap...</h3>
+                        <h2>beautiful, scalable, powerful rendering</h2>
 
-                        <p>
-                            Sort of. The limitation of many mainstream engines is their financial incentive to cater to AAA studios (or the opposite). Consequently, they prioritize "assembly line" workflows designed for high-volume production over the seamless (or verbose) flexibility needed for truly scalable, adaptable development.
-                        </p>
-                        <p>
-                            helmer is naturally unbiased. It can be bent to cater any workflow.
-                        </p>
+                        <p>a flexible, massively scalable render system built over a robust graph and a powerful asset pipeline</p>
+
+                        <p>helmer's render system is architected to scale to worlds of any size/complexity with minimal overhead</p>
+
+                        <div class='info-sec-cont'>
+                            <h4>an abundance of beautiful graphs are provided:</h4>
+
+                            <div class='info-sec'>
+                                <h3 style={{ 'margin-bottom': 0 }}>default/raster graph</h3>
+                                <img src={CityCornerScreenshot} width={'100%'} />
+                                <ul style={{ display: 'flex', 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start' }}>
+                                    <li>tunable PBR</li>
+                                    <li>physically based sky [LUT-based or raycast-based]</li>
+                                    <li>SSGI</li>
+                                    <li>SSR</li>
+                                    <li>cascaded EVSM</li>
+                                </ul>
+                            </div>
+                            <div class='info-sec'>
+                                <h3>hybrid (RT) graph</h3>
+                                <p>a robust integration for the expeditious yet powerful bevy_ecs library</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                                <ul style={{ display: 'flex', 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start' }}>
+                                    <li>tunable PBR</li>
+                                    <li>physically based sky [LUT-based or raycast-based]</li>
+                                    <li>DDGIR</li>
+                                    <li>RT reflections [RT + DDGIR fallback | SSR fallback]</li>
+                                    <li>cascaded EVSM</li>
+                                </ul>
+                            </div>
+                            <div class='info-sec'>
+                                <h3>traced graph</h3>
+                                <p>a robust integration for the expeditious yet powerful bevy_ecs library</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                                <ul style={{ display: 'flex', 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start' }}>
+                                    <li>monte-carlo tracer</li>
+                                    <li>robust, scalable optimizations to accomidate real time performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='info' style={{ "max-width": "53em" }}>
+                        <h2><b>tons</b> of building blocks</h2>
+
+                        <div class='info-sec-cont'>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_editor_egui'>
+                                <h3>helmer ui</h3>
+                                <p style={{ margin: 0 }}>robust, rich, ergonomic retained & immediate APIs</p>
+                                <p style={{ margin: 0 }}>flexible, powerful styling/layout</p>
+                                <p style={{ 'margin-top': 0 }}>minimal overhead</p>
+                                <img src='https://raw.githubusercontent.com/leighteg/helmer/refs/heads/main/assets/screenshots/editor.png' width={'100%'} style={{ 'padding': 0 }} />
+                            </a>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_becs'>
+                                <h3>powerful animation</h3>
+                                <p>a robust integration for the expeditious yet powerful <code>bevy_ecs</code> library</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                            </a>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_becs'>
+                                <h3>sprite tooling</h3>
+                                <p>a robust integration for the expeditious yet powerful <code>bevy_ecs</code> library</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class='info' style={{ "max-width": "53em" }}>
+                        <h2>runs <b>everywhere</b></h2>
+
+                        <p>helmer was architected to both seamlessly scale to hardware of any tier/generation, and to deterministically run on any platform</p>
+
+                        <div class='info-sec-cont'>
+                            <h4>want to get straight to scripting? multiple integrations are provided:</h4>
+
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_editor_egui'>
+                                <h3>web support</h3>
+                                <p>a powerful, featured editor providing rich luau, rust, and visual scripting integrations</p>
+                                <img src='https://raw.githubusercontent.com/leighteg/helmer/refs/heads/main/assets/screenshots/editor.png' width={'100%'} style={{ 'padding': 0 }} />
+                            </a>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_editor_egui'>
+                                <h3>multiplatform</h3>
+                                <p>a powerful, featured editor providing rich luau, rust, and visual scripting integrations</p>
+                                <img src='https://raw.githubusercontent.com/leighteg/helmer/refs/heads/main/assets/screenshots/editor.png' width={'100%'} style={{ 'padding': 0 }} />
+                            </a>
+                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_becs'>
+                                <h3>seamless, smooth low-tier hardware experience</h3>
+                                <p>a robust integration for the expeditious yet powerful <code>bevy_ecs</code> library</p>
+                                <img src='https://github.com/leighteg/helmer/blob/main/assets/screenshots/editor.png?raw=true' width={'100%'} />
+                            </a>
+                        </div>
                     </div>
 
                     <a href='/details' class='page-pane'>
