@@ -159,6 +159,46 @@ a.info-sec:active {
     font-size: x-large;
 }
 
+.split-comparison {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.split-comparison .pane {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-right: 2px solid white;
+}
+
+.split-comparison .pane:last-child {
+    border-right: none;
+}
+
+.split-comparison .pane img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 300%;
+    object-fit: cover;
+}
+
+.split-comparison .pane small {
+    z-index: 1;
+    background-color: rgba(215, 215, 215, 0.1);
+}
+
+.info-sec ul {
+    text-align: initial;
+}
+
 
 @media screen and (max-width: 600px) {
     .base {

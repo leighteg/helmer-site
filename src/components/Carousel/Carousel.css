@@ -12,7 +12,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     color: rgba(255, 255, 255, 0.6);
-    font-size: 13vw;
+    font-size: clamp(4.6em, 18vw, 14em);
     font-weight: bold;
     transition: .4s;
     z-index: 10;
@@ -110,4 +110,17 @@
     height: auto;
     display: block;
     user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+    #enlarged-image-container span {
+        padding: .5em;
+    }
+
+    #enlarged-image-container span img {
+        max-width: 90vw;
+        max-height: 90vh;
+
+        border-radius: .5em;
+    }
 }
