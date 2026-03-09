@@ -1,3 +1,11 @@
+:root {
+    --info-color: rgba(255, 255, 255, 0.4);
+}
+
+:root[data-theme="dark"] {
+    --info-color: rgba(255, 255, 255, 0.05);
+}
+
 .base {
     max-width: 90vw;
     position: absolute;
@@ -27,8 +35,9 @@
 
 .info {
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--info-color);
     border-radius: 1em;
+    transition: .1s;
 }
 
 .info>* {

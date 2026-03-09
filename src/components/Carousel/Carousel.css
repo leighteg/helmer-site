@@ -1,3 +1,11 @@
+:root {
+    --bg-color: rgba(255, 255, 255, 0.6);
+}
+
+:root[data-theme="dark"] {
+    --bg-color: rgba(160, 160, 160, 0.4);
+}
+
 .carousel-container {
     position: relative;
     overflow: hidden;
@@ -11,7 +19,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--bg-color);
     font-size: clamp(4.6em, 18vw, 14em);
     font-weight: bold;
     transition: .4s;

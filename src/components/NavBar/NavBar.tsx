@@ -3,10 +3,13 @@ import "./NavBar.css"
 import { useLocation } from "@solidjs/router";
 import GitHubLogo from '../../assets/logos/github.svg'
 import StoatLogo from '../../assets/logos/stoat-light.svg'
+import { usePageContext } from "../../logic_components/PageContext/PageContext";
+import LightModeIcon from "../../assets/icons/light.svg"
+import DarkModeIcon from "../../assets/icons/dark.svg"
 
 const NavBarItem = (props: { name?: string; icon?: string; path: string }) => {
-  const location = useLocation();
-  const active = createMemo(() => location.pathname === `${props.path}`);
+  const location = useLocation()
+  const active = createMemo(() => location.pathname === `${props.path}`)
 
   return (
     <a href={`${props.path}`} classList={{ active: active() }}>
@@ -19,8 +22,10 @@ const NavBarItem = (props: { name?: string; icon?: string; path: string }) => {
 };
 
 const NavBar = () => {
-  const location = useLocation();
-  const isTitleBarActive = createMemo(() => location.pathname === `/`);
+  const location = useLocation()
+  const isTitleBarActive = createMemo(() => location.pathname === `/`)
+
+  const PageContext = usePageContext()
 
   return (
     <div id="navbar">
@@ -33,6 +38,12 @@ const NavBar = () => {
       </div>
 
       <div id="children-social">
+        <div onClick={() => PageContext.setThemeValue(c => c == "light" ? "dark" : "light")}>
+          <Switch>
+            <Match when={PageContext.themeValue() == "light"}><img src={DarkModeIcon} /></Match>
+            <Match when={PageContext.themeValue() == "dark"}><img src={LightModeIcon} /></Match>
+          </Switch>
+        </div>
         <NavBarItem icon={GitHubLogo} path="https://github.com/leighteg/helmer" />
         <NavBarItem icon={StoatLogo} path="https://stt.gg/43zc35Aw" />
       </div>
