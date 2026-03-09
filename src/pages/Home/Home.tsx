@@ -196,6 +196,12 @@ const Home = () => {
 
                         <p>all major features are implemented. helmer is <a href='https://github.com/leighteg/helmer?tab=readme-ov-file#left-to-do'>very close</a> to alpha</p>
                     </div>
+
+                    <div class='info' style={{ "max-width": "53em" }}>
+                        <h3>this site is approximate!</h3>
+
+                        <p>helmer is a project of ambitious scope, and is still in pre-alpha. this site is only updated every so often and may not accurately reflect the current state of helmer. everything is subject to change</p>
+                    </div>
                 </div>
             </div>
         </>
