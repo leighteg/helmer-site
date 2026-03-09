@@ -1,7 +1,7 @@
 import { createEffect, createMemo, createSignal, Match, Show, Switch } from "solid-js"
 import "./NavBar.css"
 import { useLocation } from "@solidjs/router";
-import GitHubLogo from '../../assets/logos/github.svg'
+import GitHubLogo from '../../assets/logos/github-light.svg'
 import StoatLogo from '../../assets/logos/stoat-light.svg'
 import { usePageContext } from "../../logic_components/PageContext/PageContext";
 import LightModeIcon from "../../assets/icons/light.svg"

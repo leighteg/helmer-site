@@ -30,7 +30,7 @@ const Demos: DemoEntry[] = [
             </ul>
         </div> as HTMLDivElement,
         icon: CityCornerScreenshot,
-        file: new URL("https://helmer.leighteg.dev/builds/demos/becs_bench"),
+        file: new URL("https://builds.helmer.leighteg.dev/builds/demos/becs_bench"),
         date: new Date(Date.UTC(2026, 1, 3)),
     }
 ]

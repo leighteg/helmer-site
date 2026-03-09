@@ -33,7 +33,7 @@ const Home = () => {
                         <div class='info-sec-cont'>
                             <h4>want to get straight to building? multiple integrations are provided:</h4>
 
-                            <a class='info-sec' href='https://github.com/leighteg/helmer/tree/main/helmer_editor_egui'>
+                            <a class='info-sec' href='/tools#editor'>
                                 <h3>helmer editor</h3>
                                 <p>a powerful, featured editor providing rich luau, rust, and visual scripting integrations</p>
                                 <img src={EditorScreenshot} width={'100%'} />

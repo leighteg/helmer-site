@@ -14,7 +14,12 @@
 }
 
 #tools-body .tool-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     max-width: 60%;
+    box-sizing: border-box;
 
     padding: 1em;
     padding-top: 0;
@@ -23,32 +28,47 @@
     background-color: rgba(190, 190, 190, 0.3);
 }
 
-#tools-body .tool-section button {
-    display: flex;
-    align-items: center;
-    height: 2.5em;
-    border-radius: .5em;
-    border: 2px dashed black;
-    font-weight: 600;
-    cursor: pointer;
+#tools-body .tool-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: .3em;
 }
 
-#tools-body .tool-section button:hover {
+#tools-body .tool-section .button {
+    display: inline-flex;
+    align-items: center;
+
+    height: 2.5em;
+    padding: 0 1.2em 0 0;
+    border-radius: .5em;
+    border: 2px dashed black;
+    font-size: .8em;
+    font-weight: 700;
+    cursor: pointer;
+    background: none;
+
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#tools-body .tool-section .button:hover {
     border: 2px solid black;
 }
 
-#tools-body .tool-section button img {
+#tools-body .tool-section .button img {
+    height: 1.7em;
+    width: auto;
+    object-fit: contain;
     margin-right: .8em;
     margin-left: .3em;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
 }
 
-#tools-body .tool-section button.windows {
+#tools-body .tool-section .button.windows {
     background-color: rgba(46, 128, 221, 0.638);
 }
 
-#tools-body .tool-section button.macos {
+#tools-body .tool-section .button.macos {
     background-color: rgba(46, 128, 221, 0.233);
 }
 
