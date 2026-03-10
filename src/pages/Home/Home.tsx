@@ -15,6 +15,7 @@ import WASMScreenshot from '../../assets/screenshots/wasm.png'
 import AnimationScreencast from '../../assets/screenshots/animation.gif'
 import AnimationKeyframeScreencast from '../../assets/screenshots/animation_keyframe.gif'
 import SpriteScreencast from '../../assets/screenshots/sprite.gif'
+import IdealFlowgraph from '../../assets/graphs/helmer_ideal_flowgraph.svg'
 import Carousel from '../../components/Carousel/Carousel'
 import './Home.css'
 
@@ -58,7 +59,18 @@ const Home = () => {
                     </div>
 
                     <div class='info' style={{ "max-width": "53em" }}>
-                        <h2>beautiful, scalable, powerful rendering.</h2>
+                        <h2><b>hyperscale, expansive</b> architecture, highly <b>modular</b> structure</h2>
+
+                        <p>not only was helmer's anti-blocking architecture designed to scale with demands of any eccentricities over any hardware, but is structured as a highly-modular, "choose what you want, ditch what you hate" system of anti-dependancy. a component of helmer can be used individually, but may depend on <code>helmer</code></p>
+
+                        <div class='info-sec-cont'>
+                            <img src={IdealFlowgraph} width={'100%'} style={{ 'padding': 0 }} />
+                            <small>flowchart demonstrates the ideal, in-progress restructure; may not reflect the repo</small>
+                        </div>
+                    </div>
+
+                    <div class='info' style={{ "max-width": "53em" }}>
+                        <h2>beautiful, scalable, <b>powerful</b> rendering.</h2>
 
                         <p>a flexible, massively scalable render system built over a robust graph and a powerful asset pipeline</p>
 
@@ -83,15 +95,15 @@ const Home = () => {
                                 <div class="split-comparison">
                                     <div class="pane">
                                         <img src={ComparisonRasterScreenshot} width={'100%'} style={{ padding: 0 }} />
-                                        <small>raster</small>
+                                        <small style={{ color: 'black' }}>raster</small>
                                     </div>
                                     <div class="pane">
                                         <img src={ComparisonRasterSSGIScreenshot} width={'100%'} style={{ padding: 0 }} />
-                                        <small>raster (SSGI)</small>
+                                        <small style={{ color: 'black' }}>raster (SSGI)</small>
                                     </div>
                                     <div class="pane">
                                         <img src={ComparisonHybridScreenshot} width={'100%'} style={{ padding: 0 }} />
-                                        <small>hybrid</small>
+                                        <small style={{ color: 'black' }}>hybrid</small>
                                     </div>
                                 </div>
                                 <ul style={{ display: 'flex', 'flex-direction': 'column', 'justify-content': 'start', 'align-items': 'start' }}>
