@@ -1,11 +1,10 @@
 import SponzaColumnsScreenshot from '../../assets/screenshots/sponza_columns.png'
-import SponzaRaptorScreenshot from '../../assets/screenshots/sponza_raptor.png'
 import SponzaOverviewScreenshot from '../../assets/screenshots/sponza_overview.png'
-import SponzaTopdownScreenshot from '../../assets/screenshots/sponza_topdown.png'
 import CityCornerScreenshot from '../../assets/screenshots/city_corner.png'
 import EditorScreenshot from '../../assets/screenshots/editor.png'
 import HelmerEditorScreenshot from '../../assets/screenshots/helmer_editor.png'
 import HelmerViewScreenshot from '../../assets/screenshots/helmer_view.png'
+import TracedLargeScreenshot from '../../assets/screenshots/traced_large.png'
 import TracedGraphScreenshot from '../../assets/screenshots/traced_graph.png'
 import ComparisonRasterScreenshot from '../../assets/screenshots/comparison_raster.png'
 import ComparisonRasterSSGIScreenshot from '../../assets/screenshots/comparison_raster_ssgi.png'
@@ -22,7 +21,7 @@ import './Home.css'
 const Home = () => {
     return (
         <>
-            <Carousel images={[SponzaColumnsScreenshot, CityCornerScreenshot, SponzaRaptorScreenshot, SponzaOverviewScreenshot, SponzaTopdownScreenshot]} />
+            <Carousel images={[SponzaOverviewScreenshot, CityCornerScreenshot, EditorScreenshot, SpriteScreencast, SponzaColumnsScreenshot, AnimationKeyframeScreencast, TracedLargeScreenshot]} />
 
             <div style={{ display: 'flex', "justify-content": 'center' }}>
                 <div class='base'>

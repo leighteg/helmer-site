@@ -1,9 +1,13 @@
 :root {
     --info-color: rgba(255, 255, 255, 0.4);
+    --a-info-sec-active: rgb(175, 175, 175);
+    --info-sec-active: rgb(230, 230, 230);
 }
 
 :root[data-theme="dark"] {
     --info-color: rgba(255, 255, 255, 0.05);
+    --a-info-sec-active: rgb(120, 120, 120);
+    --info-sec-active: rgb(80, 80, 80);
 }
 
 .base {
@@ -72,11 +76,11 @@
 }
 
 .info-sec-cont>a.info-sec:active {
-    background-color: rgb(175, 175, 175);
+    background-color: var(--a-info-sec-active);
 }
 
 .info-sec-cont>.info-sec:active {
-    background-color: rgb(230, 230, 230);
+    background-color: var(--info-sec-active);
 }
 
 .info-sec {
@@ -103,10 +107,11 @@ a.info-sec {
 
 a.info-sec:hover {
     scale: 1.01;
+    background-color: rgba(128, 128, 128, 0.08);
 }
 
 a.info-sec:active {
-    outline: 2px solid rgba(0, 0, 255, 0.4);
+    outline: 4px solid rgba(0, 0, 255, 0.4);
 }
 
 .info-sec img {

@@ -2,7 +2,7 @@ import { createSignal, onCleanup, Show, For, onMount, createEffect } from "solid
 import "./Carousel.css";
 
 const Carousel = (props: { images: string[] }) => {
-    const images = props.images;
+    const images = props.images.sort(() => Math.random() - 0.5);
 
     const [enlargedImage, setEnlargedImage] = createSignal<string>();
     let canCloseEnlargedImage = false;
@@ -67,38 +67,38 @@ const Carousel = (props: { images: string[] }) => {
 
     return (
         <>
-        <div class="carousel-container" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
-            <span class="carousel-title">helmer</span>
+            <div class="carousel-container" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+                <span class="carousel-title">helmer</span>
 
-            <div class="carousel-wrapper" style={{ transform: `translateX(-${current() * 100}%)` }}>
-                <For each={images}>{(image) =>
-                    <img src={image} class="carousel-image" onClick={() => setEnlargedImage(image)} />
-                }</For>
+                <div class="carousel-wrapper" style={{ transform: `translateX(-${current() * 100}%)` }}>
+                    <For each={images}>{(image) =>
+                        <img src={image} class="carousel-image" onClick={() => setEnlargedImage(image)} />
+                    }</For>
+                </div>
+
+                <button class="carousel-button prev" onClick={() => {
+                    clearInterval(interval)
+                    prev()
+                    startSlide()
+                }}>
+                    ‹
+                </button>
+                <button class="carousel-button next" onClick={() => {
+                    clearInterval(interval)
+                    next()
+                    startSlide()
+                }}>
+                    ›
+                </button>
             </div>
 
-            <button class="carousel-button prev" onClick={() => {
-                clearInterval(interval)
-                prev()
-                startSlide()
-            }}>
-                ‹
-            </button>
-            <button class="carousel-button next" onClick={() => {
-                clearInterval(interval)
-                next()
-                startSlide()
-            }}>
-                ›
-            </button>
-        </div>
-
-        <Show when={enlargedImage()}>
-            <div id="enlarged-image-container">
-                <span>
-                    <img src={enlargedImage()} />
-                </span>
-            </div>
-        </Show>
+            <Show when={enlargedImage()}>
+                <div id="enlarged-image-container">
+                    <span>
+                        <img src={enlargedImage()} />
+                    </span>
+                </div>
+            </Show>
         </>
     );
 };

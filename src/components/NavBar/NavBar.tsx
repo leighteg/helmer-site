@@ -38,14 +38,14 @@ const NavBar = () => {
       </div>
 
       <div id="children-social">
-        <div onClick={() => PageContext.setThemeValue(c => c == "light" ? "dark" : "light")}>
+        <NavBarItem icon={GitHubLogo} path="https://github.com/leighteg/helmer" />
+        <NavBarItem icon={StoatLogo} path="https://stt.gg/43zc35Aw" />
+        <div onClick={() => PageContext.setThemeValue(c => c == "light" ? "dark" : "light")} style={{ margin: 0 }}>
           <Switch>
             <Match when={PageContext.themeValue() == "light"}><img src={DarkModeIcon} /></Match>
             <Match when={PageContext.themeValue() == "dark"}><img src={LightModeIcon} /></Match>
           </Switch>
         </div>
-        <NavBarItem icon={GitHubLogo} path="https://github.com/leighteg/helmer" />
-        <NavBarItem icon={StoatLogo} path="https://stt.gg/43zc35Aw" />
       </div>
     </div>
   )

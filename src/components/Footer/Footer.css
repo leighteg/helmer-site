@@ -2,10 +2,11 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 3vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    font: clamp(.7em, 3.8vw, 1em) sans-serif;
     background-color: rgba(0, 0, 0, 0.095);
     backdrop-filter: blur(1em);
     user-select: none;

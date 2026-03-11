@@ -3,11 +3,13 @@
 
     --bg-color: #ffffff;
     --text-color: #333333;
+    --code-bg-color: rgba(0, 0, 0, 0.1);
 }
 
 :root[data-theme="dark"] {
     --bg-color: #1a1a1a;
     --text-color: #f0f0f0;
+    --code-bg-color: rgba(0, 0, 0, 0.25);
 }
 
 *,
@@ -32,6 +34,6 @@ body {
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    background-color: var(--code-bg-color);
 }
