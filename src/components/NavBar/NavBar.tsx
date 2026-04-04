@@ -2,6 +2,7 @@ import { createEffect, createMemo, createSignal, Match, Show, Switch } from "sol
 import "./NavBar.css"
 import { useLocation } from "@solidjs/router";
 import GitHubLogo from '../../assets/logos/github-light.svg'
+import DiscordLogo from '../../assets/logos/discord-white-icon.svg'
 import StoatLogo from '../../assets/logos/stoat-light.svg'
 import { usePageContext } from "../../logic_components/PageContext/PageContext";
 import LightModeIcon from "../../assets/icons/light.svg"
@@ -39,7 +40,11 @@ const NavBar = () => {
 
       <div id="children-social">
         <NavBarItem icon={GitHubLogo} path="https://github.com/leighteg/helmer" />
+        <NavBarItem icon={DiscordLogo} path="https://discord.gg/kxB6AEuHwH" />
         <NavBarItem icon={StoatLogo} path="https://stt.gg/43zc35Aw" />
+      </div>
+      <div id="children-toggle">
+        <span class="separator" />
         <div onClick={() => PageContext.setThemeValue(c => c == "light" ? "dark" : "light")} style={{ margin: 0 }}>
           <Switch>
             <Match when={PageContext.themeValue() == "light"}><img src={DarkModeIcon} /></Match>

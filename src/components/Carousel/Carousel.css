@@ -30,6 +30,13 @@
     pointer-events: none;
 }
 
+@starting-style {
+    .carousel-title {
+        font-size: .1em;
+        color: black;
+    }
+}
+
 .carousel-title:hover {
     color: rgba(60, 60, 60, 0.9);
 }
